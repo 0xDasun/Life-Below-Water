@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Dasun Renuja (Student 2)</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> </head>
+<body>
+    
+    <header id="top" style="background-color: #02304f; padding: 20px; text-align: center;">
+        <h1 style="color: white; margin: 0;">Life Below Water - SDG 14</h1>
+        <p style="color: #7de4f0; margin-top: 5px;">Page Editor</p>
+    </header>
+
+    <section class="stud">
+        <h2>Dasun Renuja, SDG 14 Team, Student 2 (Splash, AIS, Content)</h2>
+    </section>
+
+    <div class="container">
+        <main>
+
+            <section>
+                <h2 id="splash">Splash Screen</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Splash Screen serves as an engaging entry point. Structurally, it uses a full-screen layout with absolute positioning to layer a gradient background, decorative CSS-animated bubbles, and a centered content container. I utilized CSS <code>@keyframes</code> for the rising bubbles, the bobbing ocean icon, and the loader bar animation to create a dynamic visual experience without relying on external video files. Functionally, JavaScript is used to manage a countdown timer via <code>setTimeout()</code>, updating the DOM dynamically. Once the countdown reaches zero, or if the user clicks the "Skip Intro" button, an automatic redirect to the Home page is triggered via <code>window.location.href</code>.</p> 
+                    
+                    <h3>Accessibility</h3>
+                        <p>To ensure accessibility, the main content area is wrapped in a <code>div</code> with <code>role="region"</code> and an <code>aria-label</code>. Decorative elements like the background and animated bubbles are hidden from screen readers using <code>aria-hidden="true"</code>. The countdown timer utilizes <code>aria-live="polite"</code> so that screen readers announce the changing text naturally. The loader bar also includes standard progress bar ARIA attributes (<code>role="progressbar"</code>, <code>aria-valuemin</code>, <code>aria-valuemax</code>).</p>
+                    
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="validation_ST2.html#splashVal">View Splash Screen Validation</a></p> 
+
+                    <h3>Link to the page</h3>
+                        <p><a href="splash.html">View Splash Screen</a></p>
+            </section>
+
+            <section>
+                <h2 id="ais">Action Impact Simulator (AIS) Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>This page uses an embedded CSS layout featuring CSS Grid (<code>grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))</code>) to create a responsive layout for the action cards. The interactivity is entirely JavaScript-driven. When a user clicks an action card, a JS function toggles its selection state, storing the selection in an object. The script then calculates the total points, dynamically updates the impact score in the DOM, adjusts the width of the visual progress bar, and categorizes the impact level (Low, Medium, High). Based on this level, JS adds specific classes to the background element (<code>#ais-page-bg</code>) to smoothly transition the page's color scheme.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>The action cards are fully keyboard accessible; they feature a <code>tabindex="0"</code> and listen for both 'Enter' and 'Space' key events to toggle their state. The cards utilize <code>role="checkbox"</code> and dynamically update their <code>aria-checked</code> status via JavaScript to inform assistive technologies. The impact result panel features <code>aria-live="polite"</code> so users are immediately notified when their score and impact level change.</p>
+
+                    <h3>Link to the validation page</h3>
+                        <p><a href="validation_ST2.html#aisVal">View AIS Validation</a></p> 
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="AIS.html">View Action Impact Simulator</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page: Marine Life in Danger</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Content Page is structured using semantic HTML5 tags including <code>&lt;main&gt;</code>, <code>&lt;h1&gt;</code> to <code>&lt;h3&gt;</code>, and <code>&lt;ul&gt;</code> to establish a clear hierarchy. To manage the long-form content, I implemented internal navigation using anchor links (<code>href="#section-id"</code>) that correspond to specific sections on the page. The layout heavily relies on CSS Flexbox for the top statistics bar and CSS Grid for the endangered species cards, ensuring a fluid, responsive design. A "Go to Top" button is implemented using CSS <code>position: fixed</code> so it remains accessible in the bottom corner as the user scrolls.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>Accessibility is maintained by ensuring a logical heading hierarchy, which aids navigation for screen reader users. All images—whether decorative or informative—include descriptive <code>alt</code> text (e.g., "Bleached white coral reef with very few fish remaining"). High contrast text colors were selected to ensure readability against the background gradients, and the internal navigation menu features an <code>aria-label</code>.</p>
+
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="validation_ST2.html#contentVal">View Content Page Validation</a></p> 
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content_ST2.html">View Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge">Challenges and Lessons Learned</h2>
+                    <p>One major challenge was implementing the dynamic background color changes on the AIS page without causing jagged transitions or relying solely on CSS <code>:hover</code> states. I resolved this by decoupling the background from the document body, placing it in a fixed full-screen <code>div</code> (<code>#ais-page-bg</code>) with a CSS transition, and using JavaScript to add or remove class names (low, medium, high) based on the calculated score. This taught me how to effectively bridge JavaScript logic with CSS state changes. Another challenge was making custom <code>div</code> elements behave like checkboxes for accessibility; I learned how crucial it is to pair <code>tabindex</code> with explicit keyboard event listeners to replicate native HTML input behavior.</p> 
+            </section>
+
+            <section>
+                <h2 id="compliance">Compliance</h2>
+                    <p>The pages I have implemented comply with JANET regulations governing web page publication. All content is strictly educational and directly aligned with the UN's Sustainable Development Goal 14 (Life Below Water). The site does not host commercial advertising, offensive material, or unauthorized software. Furthermore, academic integrity is maintained: all third-party placeholder images are sourced from royalty-free platforms (like Picsum), and the written content was independently researched and authored rather than copied directly from UN sources. <a href="https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/compliance.html" target="_blank">See the lecture notes for more details on compliance.</a></p> 
+            </section>
+
+            <section>
+                <h2 id="group">Group Meetings and Individual Contribution Log</h2>
+                    <p>Below is the log of our team meetings, focusing on my specific contributions to the group's progress.</p> 
+
+                        <table >
+                            <thead>
+                                <tr>
+                                    <th colspan="6">Group Meetings and Contribution Log</th>
+                                </tr>
+                                <tr>
+                                    <th>Meeting</th>
+                                    <th>Date &amp; Time</th>
+                                    <th>Format</th>
+                                    <th>Objective</th>
+                                    <th>Attended</th>
+                                    <th>Your Individual Contribution</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>10 Feb 2026</td>
+                                    <td>Format: In-person</td>
+                                    <td>Select SDG & roles</td>
+                                    <td>Yes</td>
+                                    <td>Agreed to Student 1 role. Set up the shared project folder and created the base HTML template for everyone to use.</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>24 Feb 2026</td>
+                                    <td>Online | Finalise design structure</td>
+                                    <td>Finalise design structure</td>
+                                    <td>Yes</td>
+                                    <td> Started building the main style.css file and implemented the global navigation bar layout.</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td> 05 Mar 2026</td>
+                                    <td>In-person</td>
+                                    <td>Review content drafts</td>
+                                    <td>Yes</td>
+                                    <td>Presented my Content page and the CSS Grid layout I built for the Gallery page.</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>16 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>Integrate JavaScript</td>
+                                    <td>Yes</td>
+                                    <td> Added interactive hover effects to the Gallery images and helped Student 3 troubleshoot their form.</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td> 23 Mar 2026</td>
+                                    <td> Hybrid</td>
+                                    <td>Test site navigation</td>
+                                    <td>Yes</td>
+                                    <td> Individual Contribution: Updated the Home page links to ensure they successfully routed to everyone's final HTML files.</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>29 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>final review & validatio</td>
+                                    <td>Yes</td>
+                                    <td>Ran my pages through the W3C validator, fixed a missing alt tag, and finished my Page Editor.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                    <ul class="ref">
+                        <li>United Nations (2025) <i>Goal 14: Conserve and sustainably use the oceans, seas and marine resources</i>. Available at: <a href="https://sdgs.un.org/goals/goal14" target="_blank">https://sdgs.un.org/goals/goal14</a> (Last accessed: March 2026).</li>
+                        <li>Google Fonts (2025) <i>DM Serif Display & DM Sans</i>. Available at: <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a> (Last accessed: March 2026).</li>
+                        <li>Lorem Picsum (2025) <i>Free placeholder images</i>. Available at: <a href="https://picsum.photos/" target="_blank">https://picsum.photos/</a> (Last accessed: March 2026).</li>
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                <li>Student 2 (Dasun Renuja)</li>
+                <ul> 
+                    <li><a href="#splash">Splash Screen</a></li>
+                    <li><a href="#ais">Action Impact Simulator</a></li>
+                    <li><a href="#content">Content Page</a></li>
+                </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <div class="footer-links" style="margin-bottom: 10px;">
+            <a href="validation_ST2.html" target="_blank" style="color: #7de4f0; margin: 0 10px;">Validation</a>
+        </div>
+        <div>
+            <p style="margin: 0; font-size: 0.9rem;">Developed by Dasun Renuja · w2149556/20242009</p>
+        </div>
+    </footer>
+</body>
+</html>

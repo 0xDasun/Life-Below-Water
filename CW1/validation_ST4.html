@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validator Page Student - provide your student name</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="top">
+        <h1>Life Below Water</h1>
+    </header>
+
+    <section class="stud">
+        <h2>Ranuka Samarasinghe, Group 8, Student 4</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update the content of the following sections with the information that corresponds to the pages you implemented  -->
+
+            <section>
+                <h2 id="profileVal">User Profile Page Validation</h2>
+                    <p>When I first ran the User Profile page through the W3C validator, I got a bunch of errors because I forgot to close a few div tags in the output area, and I accidentally used a duplicate ID for two different paragraphs. I also had an issue where my CSS wouldn't link properly because of a typo in the file path. The JavaScript console threw a 'TypeError' at first because I was trying to run the script before the page fully loaded, but I fixed that by moving my script to the bottom of the body tag.</p> 
+                    <img src="validationSnapshots/profile.jpeg">
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor_ST4.html#profile">Back to User Profile Page Editor</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section>
+
+            <section>
+                <h2 id="sitemapVal">Sitemap Page Validation</h2>
+                <p>The Sitemap validation was a bit of a nightmare initially. The HTML validator yelled at me for trying to use block-level elements inside the inline SVG, so I had to research how to properly structure SVG text nodes instead. For the styling, the CSS validator caught a few parse errors because I missed a semicolon at the end of my hover transition effects.</p>
+                    <img src="validationSnapshots/sitemap.jpeg">
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor_ST4.html#sitemap">Back to Sitemap Page Editor</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section></a></p>
+
+            <section>
+                <h2 id="contentVal">Future Conservation Tech Validation</h2>
+                <p>For the Content page, the HTML validator flagged me for not having alt text on two of my images, and I had accidentally nested a heading tag inside a paragraph tag, which completely broke the layout validation. Fixing those cleared the HTML errors. The CSS validator caught a warning about using an outdated prefix for CSS Grid that wasn't needed anymore, so I cleaned that up to make it standard-compliant.</p>
+                    <img src="validationSnapshots/content_ST4.jpeg">
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor_ST4.html#content_ST4">Back to Content Page Editor</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section></a></p>
+
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 1</li>
+                <ul>
+                        <li><a href="#">Home page </a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Content</a></li>
+                    </ul>
+                <li>Student 2</li>
+                <ul> 
+                    <li><a href="#">Splash Screen</a></li>
+                    <li><a href="#">Action Impact Simulator</a></li>
+                    <li><a href="#">Content</a></li>
+                </ul>
+                    
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="#">Feedback</a> </li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Content</a></li>
+                    </ul>
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="#profileVal">User Profile </a></li>
+                        <li><a href="#sitemapVal">Sitemap</a></li>
+                        <li><a href="#contentVal">Content</a></li>
+                    </ul>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="pageEditor_ST4.html">Page Editor</a>
+        </div>
+            <div>
+                <p>Developed by Ranuka Samarasinghe / w2181775 / 20250479</p>
+            </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student 1 - Thevindu Jayasinghe</title>
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> 
+</head>
+<body>
+    
+    <header>
+        <a href="splash.html">
+            <img src="images/logo.png" alt="Life Below Water Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="AIS.html">AIS</a></li>
+                <li><a href="profile.html">User Profile</a></li>               
+                <li><a href="feedback.html">Feedback & Program Directory</a></li>
+                <li><a href="team.html">Team Page</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="stud" id="top">
+        <h2>Thevindu Jayasinghe, group 08, Student 1 (Template, Home, Gallery, Content)</h2>
+    </section>
+
+    <div class="container">
+        <main>
+
+            <section>
+                <h2 id="home">Home Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Home Page acts as the central entry point and uses the shared HTML template to maintain visual consistency. A full-screen background video was implemented using the <code>&lt;video&gt;</code> tag with <code>autoplay</code>, <code>muted</code>, and <code>loop</code> attributes, positioned fixed behind the content via CSS. The main content is structured using semantic tags like <code>&lt;section&gt;</code> and <code>&lt;article&gt;</code>. To display the mission cards, a Flexbox layout (<code>.cards-container</code>) was utilized to ensure the cards wrap properly on smaller screens. The interactive gallery links are structured using CSS Grid (<code>.gallery-container</code>) with responsive columns (<code>auto-fit</code> and <code>minmax</code>). Embedded CSS includes transition properties to create smooth hover effects (transform and background-color changes) for the gallery items.</p> 
+                    
+                    <h3>Accessibility</h3>
+                        <p>Accessibility is addressed by using semantic HTML structures which assist screen readers in parsing the page. All images within the mission cards include descriptive <code>alt</code> text (e.g., "Plastic pollution floating in the ocean"). The background video is muted by default to prevent unexpected audio playback, which is a key accessibility standard. High contrast text colors were chosen for readability over the transparent main content container.</p>
+                    
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="validation_ST1.html#homeVal">View the Home Page validation evidence</a></p> 
+
+                    <h3>Link to the page</h3>
+                        <p><a href="home.html">Go to the Home Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="gallery">Gallery Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Gallery Page features a dynamic layout using CSS Grid (<code>.thumbnail-grid</code>) to perfectly align the thumbnail cards. JavaScript is heavily utilized to handle the interactivity, separating the data structure (an array of image objects) from the DOM rendering logic. Event listeners are applied to the generated cards to trigger a modal overlay (<code>#extendedView</code>) when clicked. The modal displays the full-sized image and description dynamically. Furthermore, JavaScript is used to implement user customization features: a toggle for Dark Mode and a button to switch the font style between Georgia and Courier New, directly manipulating the DOM style properties of the <code>modalBox</code>.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>Accessibility was incorporated by ensuring the modal overlay can be closed not only via the close button but also by clicking outside the content box, providing a larger click target for users. Descriptive <code>alt</code> text is dynamically injected into the modal image based on the selected thumbnail. The hover effects on the thumbnails provide visual feedback to users that the elements are interactive.</p>
+
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="validation_ST1.html#galleryVal">View the Gallery Page validation evidence</a></p> 
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="gallery.html">Go to the Gallery Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page (The State of Our Oceans)</h2>
+                    <h3>Technical Description</h3>
+                        <p>This page delivers structured informational content using a logical hierarchy of headings (<code>&lt;h1&gt;</code> to <code>&lt;h2&gt;</code>). Internal page navigation is facilitated through an unordered list where anchor tags (<code>&lt;a href="#id"&gt;</code>) link directly to specific section IDs on the page. A CSS Grid is used for the <code>.content-section</code> layout to align images and text side-by-side cleanly. Flexbox is employed for the <code>.stat-bar</code> to distribute statistics evenly. A persistent "Go to top" button is implemented using CSS <code>position: fixed</code> at the bottom right, allowing quick navigation back to the header without relying on JavaScript.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>The internal navigation menu utilizes the <code>aria-label="Page sections"</code> attribute to clarify its purpose to assistive technologies. The "Go to top" link is similarly equipped with an <code>aria-label</code>. All informational and decorative images include detailed <code>alt</code> text describing the scene (e.g., "Aerial view of a clear blue ocean stretching to the horizon"). Semantic emphasis tags like <code>&lt;strong&gt;</code> are used appropriately rather than relying purely on CSS font-weights.</p>
+
+                    <h3>Link to the validation page</h3> 
+                        <p><a href="validation_ST1.html#contentVal">View the Content Page validation evidence</a></p> 
+
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="content_ST1.html">Go to the Content Page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>One of the primary challenges was ensuring the JavaScript logic for the Gallery modal worked seamlessly while maintaining separation of concerns. Initially, getting the dynamically generated thumbnails to trigger the correct modal data required careful event listener binding. I learned the value of storing data in an array of objects and rendering the DOM dynamically, which keeps the HTML file clean and makes the gallery easily scalable. Another challenge was implementing the shared navigation template across all pages while keeping the "active" class correct for each page; this reinforced the importance of careful file structuring and CSS class management.</p> 
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                    <p>The pages I developed adhere to the JANET regulations governing web page publication. All content is educational, ethical, and related to the academic purpose of the coursework (SDG 14: Life Below Water). No commercial activities or offensive materials are hosted. External resources, such as images, have been appropriately sourced (e.g., royalty-free or educational contexts) to comply with copyright regulations and ensure academic integrity. The site does not misuse university network resources.</p> 
+            </section>
+
+            <section>
+                <h2 id="group"> Group Meetings and Individual Contribution Log</h2>
+                    <p>Below is the record of our group meetings and my specific contributions to the project.</p> 
+
+                        <table >
+                            <thead>
+                                <tr>
+                                    <th colspan="6">Group Meetings and Contribution Log</th>
+                                </tr>
+                                <tr>
+                                    <th>Meeting</th>
+                                    <th>Date &amp; Time</th>
+                                    <th>Format</th>
+                                    <th>Objective</th>
+                                    <th>Attended</th>
+                                    <th>Your Individual Contribution</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>10 Feb 2026</td>
+                                    <td>Format: In-person</td>
+                                    <td>Select SDG & roles</td>
+                                    <td>Yes</td>
+                                    <td>Agreed to Student 1 role. Set up the shared project folder and created the base HTML template for everyone to use.</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>24 Feb 2026</td>
+                                    <td>Online | Finalise design structure</td>
+                                    <td>Finalise design structure</td>
+                                    <td>Yes</td>
+                                    <td> Started building the main style.css file and implemented the global navigation bar layout.</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td> 05 Mar 2026</td>
+                                    <td>In-person</td>
+                                    <td>Review content drafts</td>
+                                    <td>Yes</td>
+                                    <td>Presented my Content page and the CSS Grid layout I built for the Gallery page.</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>16 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>Integrate JavaScript</td>
+                                    <td>Yes</td>
+                                    <td> Added interactive hover effects to the Gallery images and helped Student 3 troubleshoot their form.</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td> 23 Mar 2026</td>
+                                    <td> Hybrid</td>
+                                    <td>Test site navigation</td>
+                                    <td>Yes</td>
+                                    <td> Individual Contribution: Updated the Home page links to ensure they successfully routed to everyone's final HTML files.</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>29 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>final review & validatio</td>
+                                    <td>Yes</td>
+                                    <td>Ran my pages through the W3C validator, fixed a missing alt tag, and finished my Page Editor.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+            </section>
+
+<section>
+    <h2 id="ref">References</h2>
+    <ul class="ref">
+        <li>World Federation of Engineering Organizations (n.d.) <i>WFEO Participation at the 40th UN-Water Meeting.</i> Available at: <a href="https://www.wfeo.org/wfeo-participation-at-the-40th-un-water-meeting/" target="_blank">https://www.wfeo.org/wfeo-participation-at-the-40th-un-water-meeting/</a> (Last accessed: March 2026). [cite: 1]</li>
+        <li>ArchDaily (n.d.) <i>Water Pollution.</i> Available at: <a href="https://www.archdaily.com" target="_blank">https://www.archdaily.com</a> (Last accessed: March 2026). [cite: 1]</li>
+        <li>iStock (n.d.) <i>Coral Reef.</i> Available at: <a href="https://www.istockphoto.com" target="_blank">https://www.istockphoto.com</a> (Last accessed: March 2026). [cite: 1]</li>
+        <li>Vecteezy (n.d.) <i>Aerial View.</i> Available at: <a href="https://www.vecteezy.com" target="_blank">https://www.vecteezy.com</a> (Last accessed: March 2026). [cite: 1]</li>
+        <li>Global Investigative Journalism Network (n.d.) <i>Overfishing.</i> Available at: <a href="https://gijn.org" target="_blank">https://gijn.org</a> (Last accessed: March 2026). [cite: 1]</li>
+        <li>The Ocean Cleanup (n.d.) <i>Plastic on Ship.</i> Available at: <a href="https://theoceancleanup.com" target="_blank">https://theoceancleanup.com</a> (Last accessed: March 2026). [cite: 1]</li>
+        <li>iStock Photo (n.d.) <i>Fish Illustration.</i> Available at: <a href="https://www.istockphoto.com/photos/" target="_blank">https://www.istockphoto.com/photos/</a> (Last accessed: March 2026). [cite: 1]</li>
+    </ul>
+</section>
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                <li>Student 1</li>
+                <ul>
+                    <li><a href="#home">Home page</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#content">Content</a></li>
+                </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings and Contribution Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="pageEditor_ST1.html">Page Editor</a>
+            <a href="validation_ST1.html" target="_blank">Validation</a>
+        </div>
+        <div>
+            <p>Developed by Thevindu Jayasinghe · w2181773/20250477</p>
+        </div>
+    </footer>
+</body>
+</html>

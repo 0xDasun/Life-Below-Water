@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validator Page - Dasun Renuja (Student 2)</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> </head>
+<body>
+    
+    <header id="top" style="background-color: #02304f; padding: 20px; text-align: center;">
+        <h1 style="color: white; margin: 0;">Life Below Water - SDG 14</h1>
+        <p style="color: #7de4f0; margin-top: 5px;">Validation Evidence</p>
+    </header>
+
+    <section class="stud">
+        <h2>Dasun Renuja, SDG 14 Team, Student 2</h2>
+    </section>
+
+    <div class="container">
+        <main>
+
+            <section>
+                <h2 id="splashVal">Splash Screen (splash.html) Validation</h2>
+                <p><strong>Reflection:</strong> Validating the Splash Screen was relatively straightforward. Since it uses minimal HTML structure and heavily relies on CSS/JS for animations, there were few structural issues. Initially, I had a warning regarding missing alternative text for an element, but I resolved this by ensuring all non-text elements used for visual effects included <code>aria-hidden="true"</code>.</p> 
+                
+                <img src="validationSnapshots/Splash.jpeg">
+                                
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST2.html#splash">Return to the Splash Screen section in the Page Editor</a></p>
+            </section>
+
+            <section>
+                <h2 id="aisVal">Action Impact Simulator (AIS.html) Validation</h2>
+                <p><strong>Reflection:</strong> The Action Impact Simulator page required careful attention to HTML5 custom data attributes (e.g., <code>data-id</code>, <code>data-points</code>). The W3C validator successfully recognized these as valid HTML5. I encountered an initial error related to an unclosed <code>div</code> tag within my action grid, which was quickly identified and fixed using the validator's line-number feedback. I also ensured all interactive elements passed basic structural checks.</p>
+                
+                <img src="validationSnapshots/AIS.jpeg" alt="W3C Validation successful result for AIS.html">
+                                
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST2.html#ais">Return to the Action Impact Simulator section in the Page Editor</a></p>
+            </section>
+
+            <section>
+                <h2 id="contentVal">Content Page (content_ST2.html) Validation</h2>
+                <p><strong>Reflection:</strong> Validating the Content Page helped me clean up my semantic structure. The validator flagged an issue where an <code>h3</code> tag was used directly after an <code>h1</code>, skipping the <code>h2</code> level. I corrected my heading hierarchy to ensure a logical document outline. Additionally, I double-checked that all my images had descriptive <code>alt</code> attributes to comply with accessibility standards, resulting in zero errors on the final check.</p>
+                
+                <img src="images/Splash.png" alt="W3C Validation successful result for content_ST2.html">
+                                
+                <h3>Back to Page Editor</h3>
+                <p><a href="pageEditor_ST2.html#content">Return to the Content Page section in the Page Editor</a></p>
+            </section>
+
+            <p class="top"><a href="#top" style="padding: 10px 20px; background-color: #007DBC; color: white; text-decoration: none; border-radius: 20px; font-size: 12px; font-weight: bold;">Go top</a></p>
+        </main>
+
+        <aside>
+            <h3>Core pages developed:</h3>
+            <ul class="top-level-ul">
+                <li>Student 2 (Dasun Renuja)</li>
+                <ul> 
+                    <li><a href="#splashVal">Splash Screen</a></li>
+                    <li><a href="#aisVal">Action Impact Simulator</a></li>
+                    <li><a href="#contentVal">Content Page</a></li>
+                </ul>
+            </ul>
+        </aside>
+    </div>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <div class="footer-links" style="margin-bottom: 10px;">
+            <a href="pageEditor_ST2.html" style="color: #7de4f0; margin: 0 10px;">Page Editor</a>
+        </div>
+        <div>
+            <p style="margin: 0; font-size: 0.9rem;">Developed by Dasun Renuja · w2149556/20242009</p>
+        </div>
+    </footer>
+</body>
+</html>
